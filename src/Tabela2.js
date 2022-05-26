@@ -1,20 +1,24 @@
 /*
- * Tabela.js
+ * Tabela2.js
  */
 
 import React, {Component} from "react";
 
-class Tabela extends Component{
-    render(){
-        return(
-        <table className="table table-hover">
-          <thead>
+
+function Cabecalho(){
+  return(
+    <thead>
             <tr>
               <th>Nome</th>
               <th>Apelido</th>
             </tr>
           </thead>
-          <tbody>
+  )
+}
+
+const Corpo =()=>{
+    return(
+    <tbody>
             <tr>
               <td>Rui</td>
               <td>Marques</td>
@@ -32,9 +36,18 @@ class Tabela extends Component{
               <td>Oliveira</td>
             </tr>
           </tbody>
+    )
+}
+
+class Tabela2 extends Component{
+    render(){
+        return(
+        <table className="table table-bordered">
+          <Cabecalho />
+          <Corpo />     
         </table>
         )
     }
 }
 
-export default Tabela
+export default Tabela2
